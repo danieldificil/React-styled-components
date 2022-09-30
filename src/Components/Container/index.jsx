@@ -5,14 +5,15 @@ import Conta from "../Conta";
 import Extrato from "../Extrato"
 
 const Container = styled.div`
-  background-color: #f1f1f1;
+  background-color: ${({theme}) => theme.body};
   min-height: 90vh;
-  padding: 0px 15vw;
+  padding: 0 15vw;
 `
 const Conteúdo = styled.section`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  color: ${({theme}) => theme.text};
 
   @media (max-width: 800px) {
     flex-direction: column;
@@ -22,7 +23,7 @@ const Conteúdo = styled.section`
 export default () => {
   return (
     <Container>
-      <Titulo>Olá Fulano!</Titulo>
+      <Titulo>Olá Daniel!</Titulo>
       <Conteúdo>
         <Conta />
         <Extrato/>

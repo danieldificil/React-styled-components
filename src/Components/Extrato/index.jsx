@@ -9,7 +9,7 @@ const Extrato = () => {
       {
         extratoLista.updates.map(({ id, type, from, value, date }) => {
           return (
-            <div><Itens key={id} type={type} from={from} value={value} date={date} /></div>
+            <Itens key={id} type={type} from={from} value={value} date={date} />
           )})
       }
     </Box>

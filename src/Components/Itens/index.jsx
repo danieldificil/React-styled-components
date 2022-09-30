@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
-import Iten, {Item} from "../Iten"
+import Item from "../Item"
 import ImageFilter from "../ImageFilter";
 
 
@@ -18,7 +18,7 @@ export default ({ ...props}) => {
   return (
     <Itens>
       {ImageFilter(props.type)}
-      <Iten {...props}/>
+      <Item {...props}/>
       <span>{props.date}</span>
     </Itens>
   )
