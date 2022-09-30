@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components'
 import Iten, {Item} from "../Iten"
+import ImageFilter from "../ImageFilter";
+
+
 const Itens = styled.div`
   box-shadow: 4px 4px 20px 0 rgba(0,0,0,0.1);
   border-radius: 10px;
@@ -14,7 +17,9 @@ const Itens = styled.div`
 export default ({ ...props}) => {
   return (
     <Itens>
+      {ImageFilter(props.type)}
       <Iten {...props}/>
+      <span>{props.date}</span>
     </Itens>
   )
 }
